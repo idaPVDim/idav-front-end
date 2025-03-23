@@ -1,0 +1,146 @@
+.user-management-container {
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.user-management-title {
+  font-size: 26px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-management-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-management-table th, .user-management-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.user-management-table th {
+  background-color: #444;
+  color: #fff;
+}
+
+.user-management-table tr:nth-child(even) {
+  background-color: #3a3a3a;
+}
+
+.user-management-table tr:hover {
+  background-color: #555;
+}
+
+.user-management-table td {
+  color: #ddd;
+}
+
+.user-management {
+  padding: 20px;
+}
+
+.user-management-header {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  z-index: 100;
+  border-radius: 10px; /* Round the corners */
+}
+
+.add-user-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.add-user-form input,
+.add-user-form select,
+.add-user-form button {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.add-user-form button {
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-user-form button:hover {
+  background-color: #218838;
+}
+
+.user-management-content {
+  max-height: 70vh; /* Adjust the height as needed */
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.user-management-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-management-content th,
+.user-management-content td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.user-management-content th {
+  background-color: #444;
+  color: #fff;
+  position: sticky;
+  top: 40px; /* Adjust based on the height of the header */
+  z-index: 50;
+}
+
+.user-management-content tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.user-management-content tr:hover {
+  background-color: #ddd;
+}
+
+.user-management-content button {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.user-management-content button:hover {
+  background-color: #ccc;
+}
+
+.action-button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.action-button:hover {
+  background-color: #218838;
+}
+
+.status-input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 5px;
+}

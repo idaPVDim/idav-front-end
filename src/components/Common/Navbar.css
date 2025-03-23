@@ -1,0 +1,128 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Match the sidebar color */
+  padding: 10px 20px;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-radius: 10px; /* Round the corners */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: rgba(51, 51, 51, 0.8); /* Apply transparency around the logo */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.navbar-logo {
+  width: 100px; /* Diminuez cette valeur pour réduire la taille de moitié */
+  height: auto; /* Maintenir le ratio d'aspect */
+  margin-right: 10px;
+}
+
+.navbar-search {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar-search input {
+  padding: 10px; /* Adjusted padding */
+  border-radius: 5px;
+  border: none;
+  width: 350px; /* Adjusted width */
+  padding-right: 40px; /* Add padding to make space for the icon */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  color: #fff; /* Change icon color to white */
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust gap to move icons slightly to the left */
+  margin-right: 40px; /* Adjust margin to center icons more */
+}
+
+.navbar-icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.user-initial {
+  background-color: #fff;
+  color: #333;
+  border-radius: 50%;
+  width: 35px; /* Adjusted size */
+  height: 35px; /* Adjusted size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; /* Adjusted font size */
+  font-weight: bold;
+}
+
+.user-profile {
+  position: absolute;
+  top: 50px; /* Adjusted position */
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.user-profile p {
+  margin: 5px 0;
+}
+
+.settings-dropdown {
+  position: absolute;
+  top: 50px; /* Adjusted position */
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.navbar-icon i {
+  font-size: 22px; /* Adjusted icon size */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links li {
+  margin: 0;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
