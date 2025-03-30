@@ -1,7 +1,10 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://127.0.0.1:8000/api", // Ajuste si nécessaire
+  baseURL: "http://127.0.0.1:8000/api", // Assurez-vous que cette URL correspond à votre backend
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 axiosInstance.interceptors.request.use(

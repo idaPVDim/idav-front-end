@@ -7,7 +7,7 @@ import Notifications from './Notifications';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faBell } from '@fortawesome/free-solid-svg-icons';
 
-function Navbar() {
+const Navbar: React.FC = () => {
   const [showProfile, setShowProfile] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -46,6 +46,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

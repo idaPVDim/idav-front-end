@@ -2,4 +2,97 @@
   text-align: center;
   font-size: 1.5em;
   margin-top: 20px;
+  padding: 2rem;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  margin-top: 80px;
+}
+
+.stock-equipment-management {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.management-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  padding: 3.5rem 1.5rem 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  color: white;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.management-header h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.management-content {
+  margin-top: 120px; /* Augmenté pour laisser plus d'espace sous le header */
+  padding: 2rem 1rem;
+  background-color: #1a1a1a;
+}
+
+.management-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem; /* Ajout d'espace supplémentaire en haut */
+}
+
+.management-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+}
+
+.management-nav button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.management-nav button:hover {
+  background-color: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+.management-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
 }

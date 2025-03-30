@@ -15,13 +15,15 @@ const Login: React.FC = () => {
     try {
       const response = await axiosInstance.post("/auth/login/", { email, password });
 
+      console.log("Login response:", response.data); // Ajoutez ce journal
+
       const token = response.data.token;
       localStorage.setItem("token", token); // Stocke le token localement
       dispatch(login(token));
 
-      navigate("/");
-    } catch (error) {
-      console.error("Login failed", error);
+      navigate("/"); // Redirige vers l'écran d'accueil
+    } catch (error: any) {
+      console.error("Login failed", error.response?.data || error.message);
       setError("Identifiants incorrects ou accès refusé.");
     }
   };

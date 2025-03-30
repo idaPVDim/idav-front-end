@@ -1,5 +1,5 @@
 import React from 'react';
-import './SecurityAuthentication.css'; // Import the CSS file for styling
+//import './SecurityAuthentication.css'; // Import the CSS file for styling
 
 function SecurityAuthentication() {
   return (

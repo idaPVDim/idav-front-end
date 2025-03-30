@@ -1,36 +1,61 @@
 .sidebar {
-  width: 200px;
-  height: 100vh;
-  background-color: #333;
+  width: 200px; /* Réduit de 250px à 200px */
+  background-color: #1e1e2f; /* Couleur sombre inspirée de la capture */
   color: #fff;
-  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed; /* Fixe la sidebar pour qu'elle ne bouge pas */
   top: 0;
   left: 0;
-  padding-top: 60px;
-  border-radius: 10px; /* Round the corners */
+  z-index: 1000;
+  border-radius: 10px; /* Bordures arrondies */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet moderne */
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 30px; /* Ajoute un espace sous le logo */
+}
+
+.sidebar-logo img {
+  width: 120px; /* Ajusté pour la nouvelle largeur */
+  border-radius: 10px; /* Arrondi pour le logo */
 }
 
 .sidebar-links {
   list-style: none;
   padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Permet à la liste de s'étendre */
 }
 
 .sidebar-links li {
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  margin-bottom: 15px;
 }
 
 .sidebar-links a {
-  color: #fff;
   text-decoration: none;
-  margin-left: 10px;
+  color: #b0b0b0; /* Couleur grise pour les liens */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px; /* Arrondi pour les liens */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .sidebar-links a:hover {
-  background-color: #444;
-  border-radius: 5px; /* Round the corners */
+  background-color: #28a745; /* Fond vert au survol */
+  color: #fff; /* Texte blanc au survol */
+}
+
+.sidebar-links .active-link {
+  background-color: #28a745; /* Fond vert pour le lien actif */
+  color: #fff;
+  font-weight: bold;
 }
 
 .sidebar-icon {

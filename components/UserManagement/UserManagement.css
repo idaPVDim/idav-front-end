@@ -96,19 +96,17 @@
 .user-management-content {
   padding: 20px;
   background-color: #f9f9f9;
-  height: calc(100% - 60px);
-  overflow-x: auto; /* Assure le défilement horizontal */
-  overflow-y: auto;
+  height: calc(100% - 60px); /* Hauteur restante après le ruban */
+  overflow-y: auto; /* Scroll uniquement pour le contenu */
   color: #333;
   border-radius: 0 0 10px 10px;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-right: -100px; /* Augmente l'espace à droite */
-  padding-right: 120px; /* Compense la marge négative */
+  max-height: 70vh; /* Adjust the height as needed */
+  margin-left: 0;
 }
 
 .user-management-content table {
   width: 100%;
-  min-width: 1200px; /* Augmentation de la largeur minimum */
   border-collapse: collapse;
   margin-top: 20px;
 }
@@ -176,42 +174,31 @@
   margin: 70px 20px 50px 0;
   border-radius: 10px;
   overflow: hidden;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 120px); /* Hauteur fixe pour éviter le scroll de la page */
 }
 
 /* Ruban de titre harmonisé */
 .page-title {
-  position: fixed; /* Change sticky to fixed */
-  top: 70px; /* Position juste en dessous de la navbar */
+  position: fixed;
+  top: 70px;
   left: 200px; /* Aligné avec la sidebar */
-  right: -50px; /* Étend le ruban vers la droite (du point de vue utilisateur) */
-  background-color: #1e1e2f; /* Même couleur que l'arrière-plan */
+  right: -50px; /* Étend encore plus le ruban vers la droite */
+  background-color: #28a745;
   color: #fff;
   padding: 15px 20px;
   margin: 0;
   font-size: 20px;
   text-align: center;
   z-index: 999;
-  border-bottom: 1px solid #2d2d44; /* Bordure subtile pour la séparation */
+  border-bottom: 2px solid #218838;
 }
 
 /* Tableau des utilisateurs */
 table {
   width: 100%;
-  min-width: 1200px; /* Augmentation de la largeur minimum */
   border-collapse: collapse;
   margin-top: 20px;
 }
-
-/* Définir des largeurs fixes pour chaque colonne */
-table th:nth-child(1) { width: 5%; }  /* ID */
-table th:nth-child(2) { width: 15%; } /* Nom d'utilisateur */
-table th:nth-child(3) { width: 20%; } /* Email */
-table th:nth-child(4) { width: 10%; } /* Type */
-table th:nth-child(5) { width: 8%; }  /* Bloqué */
-table th:nth-child(6) { width: 7%; }  /* Statut */
-table th:nth-child(7) { width: 25%; } /* Dernière connexion */
-table th:nth-child(8) { width: 10%; } /* Actions */
 
 table th,
 table td {
@@ -221,7 +208,7 @@ table td {
 }
 
 table th {
-  background-color: #1e1e2f;
+  background-color: #28a745;
   color: #fff;
   border-radius: 5px 5px 0 0;  /* Bordures arrondies en haut */
 }

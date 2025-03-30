@@ -2,30 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333; /* Match the sidebar color */
-  padding: 10px 20px;
+  background-color: #1e1e2f; /* Couleur sombre inspirée de la capture */
   color: #fff;
-  width: 100%;
+  padding: 10px 20px;
+  height: 60px;
+  width: calc(100% - 200px); /* Ajusté pour la nouvelle largeur de sidebar */
   position: fixed;
   top: 0;
-  left: 0;
+  left: 200px; /* Aligné avec la nouvelle largeur de sidebar */
   z-index: 1000;
-  border-radius: 10px; /* Round the corners */
+  border-radius: 0; /* Supprime les bordures arrondies */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet moderne */
 }
 
 .navbar-brand {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  background-color: rgba(51, 51, 51, 0.8); /* Apply transparency around the logo */
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.navbar-logo {
-  width: 100px; /* Diminuez cette valeur pour réduire la taille de moitié */
-  height: auto; /* Maintenir le ratio d'aspect */
-  margin-right: 10px;
+  display: none; /* Supprime le logo */
 }
 
 .navbar-search {
@@ -54,25 +45,31 @@
 .navbar-icons {
   display: flex;
   align-items: center;
-  gap: 20px; /* Adjust gap to move icons slightly to the left */
-  margin-right: 40px; /* Adjust margin to center icons more */
+  gap: 20px; /* Augmente l'espacement entre les icônes */
+  margin-right: 20px; /* Ajoute un espace pour éviter que les icônes soient trop à droite */
 }
 
 .navbar-icon {
   cursor: pointer;
-  position: relative;
+  color: #b0b0b0; /* Couleur grise pour les icônes */
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.navbar-icon:hover {
+  color: #007bff; /* Couleur bleue au survol */
 }
 
 .user-initial {
-  background-color: #fff;
-  color: #333;
+  background-color: #343a40;
+  color: #fff;
   border-radius: 50%;
-  width: 35px; /* Adjusted size */
-  height: 35px; /* Adjusted size */
+  width: 35px; /* Augmente la taille pour une meilleure visibilité */
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px; /* Adjusted font size */
+  font-size: 16px; /* Augmente la taille de la police */
   font-weight: bold;
 }
 
