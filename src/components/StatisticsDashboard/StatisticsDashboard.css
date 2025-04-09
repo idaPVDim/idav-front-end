@@ -1,0 +1,198 @@
+/* Wrapper with harmonized design */
+.statistics-dashboard-wrapper {
+  position: relative;
+  background-color: #1e1e2f;
+  color: #fff;
+  margin: 70px 20px 50px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: calc(100vh - 120px);
+}
+
+/* Title ribbon */
+.page-title {
+  position: fixed;
+  top: 70px;
+  left: 200px;
+  right: -50px;
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 15px 20px;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  z-index: 999;
+  border-bottom: 1px solid #2d2d44;
+}
+
+/* Main content */
+.dashboard-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  color: #333;
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading and Error states */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+  color: #333;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 16px;
+  color: #dc3545;
+  padding: 20px;
+}
+
+/* Charts container */
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 31%;
+  min-width: 300px;
+  text-align: center;
+}
+
+.chart-card h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Connection history section */
+.connection-history-section {
+  margin-top: 30px;
+}
+
+.connection-history-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.connection-history-section table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+}
+
+.connection-history-section th,
+.connection-history-section td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.connection-history-section th {
+  background-color: #1e1e2f;
+  color: #fff;
+  position: sticky;
+  top: 40px;
+  z-index: 50;
+}
+
+.connection-history-section tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.connection-history-section tr:hover {
+  background-color: #e9ecef;
+}
+
+.connection-history-section td {
+  color: #333;
+}
+
+/* Column widths */
+.connection-history-section table th:nth-child(1) { width: 5%; }  /* ID */
+.connection-history-section table th:nth-child(2) { width: 20%; } /* Utilisateur */
+.connection-history-section table th:nth-child(3) { width: 25%; } /* Date */
+.connection-history-section table th:nth-child(4) { width: 25%; } /* Province */
+.connection-history-section table th:nth-child(5) { width: 25%; } /* Statut */
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.pagination span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Export buttons */
+.export-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.export-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.export-pdf {
+  background-color: #dc3545;
+}
+
+.export-pdf:hover {
+  background-color: #c82333;
+}
+
+.export-excel {
+  background-color: #28a745;
+}
+
+.export-excel:hover {
+  background-color: #218838;
+}

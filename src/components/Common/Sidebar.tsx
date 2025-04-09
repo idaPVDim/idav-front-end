@@ -1,48 +1,81 @@
-import React from "react";
+
+
+
+
+
+import React, { useState } from "react";
 import "./Sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers, faTools, faWrench, faBoxes, faCogs } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUsers, faTools, faWrench, faBoxes, faCogs, faChevronLeft, faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import logo from "../../images/dimlogo1.png"; // Assurez-vous que le chemin est correct
+import logo from "../../images/dimlogo1.png";
 
 const Sidebar: React.FC = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleSidebar = () => setIsCollapsed(!isCollapsed);
+
   return (
-    <div className="sidebar">
-      {/* Logo */}
-      <div className="sidebar-logo">
-        <img src={logo} alt="idaPVDim Logo" style={{ width: "150px" }} />
+    <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
+      {/* Logo and Toggle */}
+      <div className="sidebar-header">
+        {!isCollapsed && (
+          <div className="sidebar-logo">
+            <img src={logo} alt="idaPVDim Logo" />
+          </div>
+        )}
+        <button className="sidebar-toggle" onClick={toggleSidebar}>
+          <FontAwesomeIcon icon={isCollapsed ? faChevronRight : faChevronLeft} />
+        </button>
       </div>
 
-      {/* Liens des fonctionnalités */}
+      {/* Navigation Links */}
       <ul className="sidebar-links">
         <li>
           <FontAwesomeIcon icon={faUsers} className="sidebar-icon" />
-          <NavLink to="/user-management" className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Gestion des Utilisateurs
+          <NavLink
+            to="/user-management"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            {!isCollapsed && "Gestion des Utilisateurs"}
           </NavLink>
         </li>
         <li>
           <FontAwesomeIcon icon={faTools} className="sidebar-icon" />
-          <NavLink to="/installation-maintenance-management" className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Gestion des Installations & des Maintenances
+          <NavLink
+            to="/installation-maintenance-management"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            {!isCollapsed && "Gestion des Installations & Maintenances"}
           </NavLink>
         </li>
         <li>
           <FontAwesomeIcon icon={faWrench} className="sidebar-icon" />
-          <NavLink to="/stock-equipment-management" className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Gestion des Stocks & des Équipements
+          <NavLink
+            to="/stock-equipment-management"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            {!isCollapsed && "Gestion des Stocks & Équipements"}
           </NavLink>
         </li>
         <li>
           <FontAwesomeIcon icon={faBoxes} className="sidebar-icon" />
-          <NavLink to="/statistic-connexion-history" className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Statistique & Historique de connexion
+          <NavLink
+            to="/statistics-dashboard"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            {!isCollapsed && "Statistiques & Historique"}
           </NavLink>
         </li>
         <li>
           <FontAwesomeIcon icon={faCogs} className="sidebar-icon" />
-          <NavLink to="/security-authentification" className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Sécurité & Authentification
+          <NavLink
+            to="/security-authentification"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            {!isCollapsed && "Sécurité & Authentification"}
           </NavLink>
         </li>
       </ul>

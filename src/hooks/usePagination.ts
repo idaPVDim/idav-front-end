@@ -12,3 +12,4 @@ function usePagination<T>(data: T[], itemsPerPage: number) {
 }
 
 export default usePagination;
+

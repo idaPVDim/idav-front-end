@@ -1,34 +1,54 @@
 .sidebar {
-  width: 200px; /* Réduit de 250px à 200px */
-  background-color: #1e1e2f; /* Couleur sombre inspirée de la capture */
+  width: 200px;
+  background-color: #1e1e2f;
   color: #fff;
   height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  position: fixed; /* Fixe la sidebar pour qu'elle ne bouge pas */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  border-radius: 10px; /* Bordures arrondies */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet moderne */
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease;
 }
 
-.sidebar-logo {
-  text-align: center;
-  margin-bottom: 30px; /* Ajoute un espace sous le logo */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .sidebar-logo img {
-  width: 120px; /* Ajusté pour la nouvelle largeur */
-  border-radius: 10px; /* Arrondi pour le logo */
+  width: 120px;
+  border-radius: 10px;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: #b0b0b0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sidebar-toggle:hover {
+  color: #fff;
 }
 
 .sidebar-links {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1; /* Permet à la liste de s'étendre */
+  flex-grow: 1;
 }
 
 .sidebar-links li {
@@ -37,27 +57,34 @@
 
 .sidebar-links a {
   text-decoration: none;
-  color: #b0b0b0; /* Couleur grise pour les liens */
+  color: #b0b0b0;
   font-size: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
-  border-radius: 5px; /* Arrondi pour les liens */
+  border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-links a {
+  justify-content: center;
 }
 
 .sidebar-links a:hover {
-  background-color: #28a745; /* Fond vert au survol */
-  color: #fff; /* Texte blanc au survol */
+  background-color: #28a745;
+  color: #fff;
 }
 
 .sidebar-links .active-link {
-  background-color: #28a745; /* Fond vert pour le lien actif */
+  background-color: #28a745;
   color: #fff;
   font-weight: bold;
 }
 
 .sidebar-icon {
   font-size: 18px;
+  min-width: 18px;
 }

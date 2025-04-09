@@ -6,10 +6,10 @@ import Footer from "../Common/Footer";
 import UserManagement from "../UserManagement/UserManagement";
 import InstallationMaintenanceManagement from "../InstallationMaintenanceManagement/InstallationMaintenanceManagement";
 import StockEquipmentManagement from "../StockEquipmentManagement/StockEquipmentManagement";
-import StatisticConnexionHistory from "../StatisticConnexionHistory/StatisticConnexionHistory";
-import SecurityAuthentication from "../SecurityAuthentication/SecurityAuthentication";
+import SecurityAuthentification from "../SecurityAuthentification/SecurityAuthentification";
 import Reports from "../Reports/Reports";
 import Settings from "../Settings/Settings";
+import StatisticsDashboard from "../StatisticsDashboard/StatisticsDashboard";
 
 const Dashboard: React.FC<{children?: React.ReactNode }> = ({ children }) => {
   return (
@@ -31,8 +31,8 @@ const Dashboard: React.FC<{children?: React.ReactNode }> = ({ children }) => {
               <Route path="user-management" element={<UserManagement />} />
               <Route path="installation-maintenance-management" element={<InstallationMaintenanceManagement />} />
               <Route path="stock-equipment-management" element={<StockEquipmentManagement />} />
-              <Route path="statistic-connexion-history" element={<StatisticConnexionHistory />} />
-              <Route path="security-authentication" element={<SecurityAuthentication />} />
+              <Route path="statistics-dashboard" element={<StatisticsDashboard />} />
+              <Route path="security-authentification" element={<SecurityAuthentification />} />
               <Route path="reports" element={<Reports />} />
               <Route path="settings" element={<Settings />} />
               <Route path="*" element={<Navigate to="user-management" />} />

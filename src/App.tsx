@@ -7,8 +7,8 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import UserManagement from "./components/UserManagement/UserManagement";
 import InstallationMaintenanceManagement from "./components/InstallationMaintenanceManagement/InstallationMaintenanceManagement";
 import StockEquipmentManagement from "./components/StockEquipmentManagement/StockEquipmentManagement";
-import StatistiqueConnectionHistory from "./components/StatisticConnexionHistory/StatisticConnexionHistory";
-import SecurityAuthentication from "./components/SecurityAuthentication/SecurityAuthentication";
+import StatistiqueConnectionHistory from "./components/StatisticsDashboard/StatisticsDashboard";
+import SecurityAuthentication from "./components/SecurityAuthentification/SecurityAuthentification";
 import Settings from "./components/Settings/Settings";
 
 function App() {

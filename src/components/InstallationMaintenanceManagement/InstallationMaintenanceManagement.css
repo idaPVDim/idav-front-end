@@ -1,0 +1,318 @@
+/* Wrapper */
+.installation-maintenance-wrapper {
+    position: relative;
+    background-color: #1e1e2f;
+    color: #fff;
+    margin: 70px 20px 50px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: calc(100vh - 120px);
+    transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar.collapsed ~ .installation-maintenance-wrapper {
+    margin-left: 60px;
+  }
+  
+  /* Title Ribbon */
+  .page-title {
+    position: fixed;
+    top: 70px;
+    left: 200px;
+    right: -50px;
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    z-index: 999;
+    border-bottom: 1px solid #2d2d44;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.collapsed ~ .page-title {
+    left: 60px;
+  }
+  
+  /* Content */
+  .installation-maintenance-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    color: #333;
+    border-radius: 0 0 10px 10px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Loading and Error States */
+  .loading, .error-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  .loading {
+    color: #333;
+  }
+  
+  .error-message {
+    color: #dc3545;
+  }
+  
+  .error-message button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .error-message button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 300px;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filters select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .bulk-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .bulk-actions button {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .bulk-actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .bulk-actions button:hover:not(:disabled) {
+    background-color: #c82333;
+  }
+  
+  .bulk-actions button:last-child {
+    background-color: #28a745;
+  }
+  
+  .bulk-actions button:last-child:hover {
+    background-color: #218838;
+  }
+  
+  /* Add Record Form */
+  .add-record-form {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .add-record-form input,
+  .add-record-form select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .add-record-form button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-record-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .add-record-form button:hover:not(:disabled) {
+    background-color: #218838;
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    min-width: 1200px;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #1e1e2f;
+    color: #fff;
+    position: sticky;
+    top: 40px;
+    z-index: 50;
+    cursor: pointer;
+  }
+  
+  table th:hover {
+    background-color: #2d2d44;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  table td {
+    color: #333;
+  }
+  
+  table td select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  table td button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  table td button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Column Widths */
+  table th:nth-child(1) { width: 5%; }  /* Checkbox */
+  table th:nth-child(2) { width: 5%; }  /* ID */
+  table th:nth-child(3) { width: 15%; } /* Équipement */
+  table th:nth-child(4) { width: 15%; } /* Lieu */
+  table th:nth-child(5) { width: 10%; } /* Type */
+  table th:nth-child(6) { width: 10%; } /* Statut */
+  table th:nth-child(7) { width: 15%; } /* Technicien */
+  table th:nth-child(8) { width: 20%; } /* Date */
+  table th:nth-child(9) { width: 10%; } /* Actions */
+  
+  /* Pagination */
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pagination button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    background-color: #218838;
+  }
+  
+  .pagination span {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Light Mode Adjustments */
+  body.light-mode .installation-maintenance-wrapper {
+    background-color: #f8f9fa;
+  }
+  
+  body.light-mode .page-title {
+    background-color: #f8f9fa;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  body.light-mode .installation-maintenance-content {
+    background-color: #fff;
+  }
+  
+  body.light-mode table th {
+    background-color: #e9ecef;
+    color: #333;
+  }
+  
+  body.light-mode table th:hover {
+    background-color: #dee2e6;
+  }

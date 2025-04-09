@@ -2,18 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1e1e2f; /* Couleur sombre inspirée de la capture */
-  color: #b0b0b0; /* Couleur grise pour le texte */
+  background-color: #1e1e2f;
+  color: #b0b0b0;
   padding: 10px 20px;
-  width: calc(100% - 200px); /* Ajusté pour la nouvelle largeur de sidebar */
+  width: calc(100% - 200px);
   position: fixed;
   bottom: 0;
-  left: 200px; /* Aligné avec la nouvelle largeur de sidebar */
+  left: 200px;
   z-index: 1000;
-  border-radius: 10px; /* Bordures arrondies */
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet moderne */
-  height: 40px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  height: 50px;
   font-size: 14px;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.sidebar.collapsed ~ .footer {
+  width: calc(100% - 60px);
+  left: 60px;
 }
 
 .footer-content {
@@ -25,7 +30,7 @@
 .footer-links {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   display: flex;
   gap: 15px;
 }
@@ -37,8 +42,24 @@
 .footer-links a {
   color: #e0e0e0;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  color: #28a745;
+}
+
+/* Light mode adjustments */
+body.light-mode .footer {
+  background-color: #f8f9fa;
+  color: #666;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .footer-links a {
+  color: #333;
+}
+
+body.light-mode .footer-links a:hover {
+  color: #28a745;
 }

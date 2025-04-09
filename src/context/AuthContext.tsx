@@ -2,9 +2,13 @@ import { createContext, useState, useEffect } from 'react';
 
 interface AuthContextType {
   userRole: string;
+  logout: () => void; // Add the logout method
 }
 
-export const AuthContext = createContext<AuthContextType>({ userRole: 'Client' });
+export const AuthContext = createContext<AuthContextType>({
+  userRole: 'Client',
+  logout: () => {}, // Provide a default no-op function for logout
+});
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [userRole, setUserRole] = useState('Client');
@@ -15,5 +19,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     setUserRole(storedRole);
   }, []);
 
-  return <AuthContext.Provider value={{ userRole }}>{children}</AuthContext.Provider>;
+  const logout = () => {
+    localStorage.removeItem('userRole');
+    setUserRole('Client');
+  };
+
+  return <AuthContext.Provider value={{ userRole, logout }}>{children}</AuthContext.Provider>;
 };
